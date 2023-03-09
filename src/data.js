@@ -1,3 +1,4 @@
+
 function buscaTag(campeoes, tag) {
   const campeoesTag = campeoes.filter((campeao) => {
     if (campeao.tags.includes(tag)) {
@@ -17,9 +18,8 @@ function buscaNome(campeoes, nome) {
     return false;
   };
   const campeoesFiltrados = campeoes.filter(filtraCampeoes);
-  return campeoesFiltrados;
+  return campeoesFiltrados
 }
-
 function ordenarCampeoes(campeoes, ordem) {
   const campeoesOrdenados = campeoes.sort((campeaoA, campeaoB) => {
     if (ordem === "maior-defesa") {
@@ -46,4 +46,15 @@ function ordenarCampeoes(campeoes, ordem) {
   return campeoesOrdenados;
 }
 
-export { buscaTag, buscaNome, ordenarCampeoes };
+function calculoAgragado(campeoes, campeoesFiltrados) {
+  const numeroCampeoesFiltrados = campeoesFiltrados.length;
+  const totalDeCampeoes = campeoes.length;
+  return `O tipo selecionado corresponde à ${((numeroCampeoesFiltrados / totalDeCampeoes) * 100).toFixed(2)}% do total de campeões.`;
+}
+
+export {
+  buscaTag,
+  buscaNome,
+  ordenarCampeoes,
+  calculoAgragado
+}

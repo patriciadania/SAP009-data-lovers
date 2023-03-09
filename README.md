@@ -5,20 +5,21 @@
 ### <h3 align="center"> 💻 Para acessar a página web <a href="https://thainaratabile.github.io/SAP009-data-lovers/src/"> clique aqui </a></h3>
 <div align="center">
 
+
 **Desenvolvido por**
 
-<p> Patricia Adania <br>
-<a href="https://www.linkedin.com/in/patriciadania/"> Linkedin </a> | <a href="https://github.com/patriciadania"> Github </a>
-</p>
-
-
 <p> Thainara Tabile <br>
-<a href="https://www.linkedin.com/in/thainaratabile/">Linkedin </a> | <a href="https://github.com/ThainaraTabile"> Github </a> </p>
+<a href="https://www.linkedin.com/in/thainaratabile/">Lindedin </a> | <a href="https://github.com/ThainaraTabile"> Github </a> </p>
 
 <p> Ariane Vieira  <br>
-<a href="https://www.linkedin.com/in/ariane-vieira-534310164/"> Linkedin </a> | <a href="https://github.com/VieiraAriane"> Github </a>
+<a href="https://www.linkedin.com/in/ariane-vieira-534310164/"> Lindedin </a> | <a href="https://github.com/VieiraAriane"> Github </a>
+</p>
+
+<p> Patricia Adania <br>
+<a href="https://www.linkedin.com/in/patriciadania/"> Lindedin </a> | <a href="https://github.com/patriciadania"> Github </a>
 </p>
 </div>
+
 
 
 ## Índice
@@ -130,6 +131,7 @@ A API do projeto foi extraída desta pasta, onde estão os dados de diferentes f
 
 Os  teste unitários das funções implementadas no arquivo `/test/data.spec.js`, cobriram 100% dos statements, functions e lines e branches.
 
+
 #### Ferramentas
 
 * [Git](https://git-scm.com/)
@@ -158,6 +160,9 @@ A interface foi produzida de modo responsivo, durante todo o processo de criaç�
 O teste de usabilidade foi aplicado com diferentes usuários, e com base nos Feedbacks, notou-se que:
 * a página web opera perfeitamente em notebooks/desktop;
 * a utlização por android também não apresentou nenhuma intercorrência, os testes foram feitos em diferentes modelos de aparelhos celulares.
+
+
+
 
 https://user-images.githubusercontent.com/122550758/221581194-cc7e1caa-ab5f-4a31-b50c-971854d431e5.mp4
 

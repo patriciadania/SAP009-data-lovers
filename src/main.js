@@ -1,5 +1,5 @@
 import lolData from "./data/lol/lol.js"
-import { buscaTag, buscaNome, ordenarCampeoes } from "./data.js"
+import { buscaTag, buscaNome, ordenarCampeoes, calculoAgragado } from "./data.js"
 // pegando os dados do lol.js e salvando na var lolData
 const campeoes = Object.values(lolData.data);
 // essa const atribuiu valor dos objetos do lol.js, para acessá-los incluir o nome da var da linha 1.data (pq   estão dentro do atributo com nome data)
@@ -26,8 +26,8 @@ const traduz = (tag) => {
 function mostraCards(campeoes) {
   campeoesNaTela = campeoes;
   document.getElementById('exibirCards').innerHTML = campeoes.map((campeao) =>
-  // aqui começa a interpolação da string
-    `
+    // aqui começa a interpolação da string
+    ` 
             <div class="cards">
                 <div class="card">
                     <div class="card-frente">
@@ -40,9 +40,9 @@ function mostraCards(campeoes) {
                             <li>ATAQUE: ${campeao.info.attack}</li>
                             <li>DEFESA: ${campeao.info.defense}</li>
                             <li>MAGIA: ${campeao.info.magic}</li>
-                            <li>DIFICULDADE: ${campeao.info.difficulty}</li>
+                            <li>DIFICULDADE:${campeao.info.difficulty}</li>
+                        <li>TIPO:${campeao.tags.map(traduz)}</li> 
                         </ul>
-                        <li class="info-do-card"> TIPO: ${campeao.tags.map(traduz)} </li>
                     </div>
                 </div>
             </div>
@@ -55,18 +55,15 @@ const botoesTiposCampeoes = document.querySelectorAll(".filtra-campeoes");
 botoesTiposCampeoes.forEach(function (tipoCampeao) {
   tipoCampeao.addEventListener('click', function () {
     const tag = tipoCampeao.id;
+    const calculoAgregadoTela = document.getElementById('calculo-agregado');
     if (tag === "filtra-todos") {
       mostraCards(campeoes);
-
+      calculoAgregadoTela.innerHTML = "";
     } else {
       const campeoesFiltrados = buscaTag(campeoes, tag);
       mostraCards(campeoesFiltrados);
-      const calculoAgregadoTela = document.getElementById('calculo-agregado');
-      const numeroCampeoesFiltrados = campeoesFiltrados.length;
-      const totalDeCampeoes = campeoes.length;
-      calculoAgregadoTela.innerHTML = (((numeroCampeoesFiltrados / totalDeCampeoes) *100).toFixed(2) +  "% dos campeões possuem esse tipo.");
+      calculoAgregadoTela.innerHTML = calculoAgragado(campeoes, campeoesFiltrados);
     }
-
   })
 });
 const buscaCampeao = document.querySelector("#txt-busca");

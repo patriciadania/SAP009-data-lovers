@@ -69,12 +69,13 @@ p {
   justify-content: center;
   text-align: justify;
   align-items: center;
-  display: flex;
-  white-space: nowrap;
-  margin: 0 auto;
-  position: sticky;
-  top: calc(25%);
-  z-index: 9999;
+   display: flex;
+   white-space: nowrap;
+   margin: 0 auto;
+   position: sticky;
+   -webkit-top: calc(5%);
+   top:8rem;
+   z-index: 9999;
 }
 .menu {
   display: inline-flex;
@@ -85,7 +86,7 @@ p {
   border-style: double;
   text-transform: uppercase;
   border-radius: 38px 0 38px 0;
-  background: url(fundoMenu.png);
+  background: url(./imagens/fundoMenu.png);
   border-color: rgb(161, 108, 35);
   flex-direction: column;
   align-items: center;
@@ -97,6 +98,7 @@ p {
   color: aliceblue;
   list-style-type: none;
   flex-direction: column;
+  font-size: 0.9rem, 9rem;
 }
 ul li:hover {
   color: rgb(161, 108, 35);
@@ -105,6 +107,7 @@ ul li:hover {
 .busca-classifica {
   display: flex;
   margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
   align-items: center;
   gap: 2rem;
   justify-content: center;
@@ -112,10 +115,10 @@ ul li:hover {
 #text-busca {
   align-items: center;
   border-radius: 8px;
-  border-color: rgb(161, 108, 35);
-  font-weight: bold;
-  border-style: double;
-  background-color: rgba(8, 63, 85);
+   border-color: rgb(161, 108, 35);
+   font-weight: bold;
+   border-style: double;
+   background-color: rgba(8, 63, 85);
 }
 .selecione {
   border-radius: 8px;
@@ -127,11 +130,22 @@ ul li:hover {
   font-weight: bold;
   cursor: pointer;
 }
+.botao-limpar{
+  border-radius: 8px;
+  border-color: rgb(161, 108, 35);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #1CA6A6;
+  border-style: double;
+  color:aliceblue;
+  font-weight: bold;
+  cursor: pointer;
+}
 #calculo-agregado {
   text-align: center;
-  background-color: #bf8a26;
+  background-color: #BF8A26;
+
 }
-/* /Estilização dos cards/  */
+/*Estilização dos cards*/
 #exibirCards {
   align-items: center;
   margin-top: 0.5rem;
@@ -167,6 +181,7 @@ ul li:hover {
   position: relative;
 }
 .cards:hover .card {
+  -moz-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
 .card-frente {
@@ -177,6 +192,7 @@ ul li:hover {
 }
 .card-frente,
 .card-verso {
+  -moz-backface-visibility: hidden;
   backface-visibility: hidden;
   position: absolute;
   flex-wrap: wrap;
@@ -199,7 +215,8 @@ ul li:hover {
 .nome-do-verso {
   grid-row: auto;
   display: inline-flex;
-  margin-left: 5px;
+  margin-left: 2px;
+  flex-direction: column;
 }
 /* /Estilização do footer/  */
 .rodape {
@@ -237,3 +254,84 @@ a:hover {
   text-align: center;
   width: 5%;
 }
+
+@media screen (max-width: 820px) {
+  
+  .info{
+    -webkit-display:none;
+    display: none;
+  }
+.menu-fixo {
+  top: calc(5%);
+}  
+#calculo-agregado{
+  margin-top: 85px;
+}
+.container{
+    margin-bottom: 9rem;
+  }
+  #exibirCards {
+    align-items: center;
+    margin-top: 5rem;
+    margin-left: 8rem;
+    margin-right: 8rem;
+  }
+  .todos-campeoes{
+    display: block;
+  }
+  .cards {
+    width: 14rem;
+    height: 14rem;
+    display: inline-block;
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+  .card {
+    transition: transform 3s;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    position: relative;
+    display: inline-block;
+  }
+  #nome-do-card{
+    font-size: 0.9rem;
+  }
+  .imagem-do-card {
+    width: 14rem;
+    height: 10rem;
+    position: relative;
+}
+img {
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+.cards:hover .cardd-frente {
+  transform: rotateY(180deg);
+}
+.card-verso {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8px;
+  padding-top: 0;
+ -webkit-transform: rotateY(-180deg);
+}
+.nome-verso{
+  display: inline-flex;
+  font-size: 0.9rem;
+  margin-top: 0;
+  grid-row: auto;
+}
+.card-frente, .card-verso {
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+    position: absolute;
+}
+  .info-do-card{
+display: block;
+  }
+  .rodape {
+      display: none;
+  }
+  }

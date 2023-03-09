@@ -1,4 +1,4 @@
-import { buscaNome, buscaTag, ordenarCampeoes } from "../src/data.js";
+import { buscaNome, buscaTag, calculoAgragado, ordenarCampeoes } from "../src/data.js";
 
 describe("buscaNome", () => {
   it("isto é uma função", () => {
@@ -315,5 +315,92 @@ describe("ordenarCampeoes", () => {
       },
     ];
     expect(ordenarCampeoes(campeoes, ordem)).toStrictEqual(resultadoEsperado);
+  });
+
+  it("função de ordenar campeao com ordem indefinida", () => {
+    const campeoes = [
+      {
+        nome: "Ashe",
+        info: { attack: 7, defense: 3, magic: 2, difficulty: 4 },
+      },
+      {
+        nome: "Amumu",
+        info: { attack: 2, defense: 8, magic: 8, difficulty: 3 },
+      },
+      {
+        nome: "Lee Sin",
+        info: { attack: 8, defense: 5, magic: 3, difficulty: 6 },
+      },
+    ];
+    const ordem = "indefinida";
+
+    const resultadoEsperado = campeoes;
+    expect(ordenarCampeoes(campeoes, ordem)).toStrictEqual(resultadoEsperado);
+  });
+
+  it("função de cálculo agragado com 100%", () => {
+    const campeoes = [
+      {
+        nome: "Ashe",
+        info: { attack: 7, defense: 3, magic: 2, difficulty: 4 },
+      },
+      {
+        nome: "Amumu",
+        info: { attack: 2, defense: 8, magic: 8, difficulty: 3 },
+      },
+      {
+        nome: "Lee Sin",
+        info: { attack: 8, defense: 5, magic: 3, difficulty: 6 },
+      },
+    ];
+
+    const campeoesFiltrados = [
+      {
+        nome: "Ashe",
+        info: { attack: 7, defense: 3, magic: 2, difficulty: 4 },
+      },
+      {
+        nome: "Amumu",
+        info: { attack: 2, defense: 8, magic: 8, difficulty: 3 },
+      },
+      {
+        nome: "Lee Sin",
+        info: { attack: 8, defense: 5, magic: 3, difficulty: 6 },
+      },
+    ];
+
+    const resultadoEsperado = 'O tipo selecionado corresponde à 100.00% do total de campeões.';
+    expect(calculoAgragado(campeoes, campeoesFiltrados)).toStrictEqual(resultadoEsperado);
+  });
+
+  it("função de cálculo agragado com 25%", () => {
+    const campeoes = [
+      {
+        nome: "Ashe",
+        info: { attack: 7, defense: 3, magic: 2, difficulty: 4 },
+      },
+      {
+        nome: "Amumu",
+        info: { attack: 2, defense: 8, magic: 8, difficulty: 3 },
+      },
+      {
+        nome: "Lee Sin",
+        info: { attack: 8, defense: 5, magic: 3, difficulty: 6 },
+      },
+      {
+        nome: "Zed",
+        info: { attack: 8, defense: 5, magic: 3, difficulty: 6 },
+      },
+    ];
+
+    const campeoesFiltrados = [
+      {
+        nome: "Ashe",
+        info: { attack: 7, defense: 3, magic: 2, difficulty: 4 },
+      }
+    ];
+
+    const resultadoEsperado = 'O tipo selecionado corresponde à 25.00% do total de campeões.';
+    expect(calculoAgragado(campeoes, campeoesFiltrados)).toStrictEqual(resultadoEsperado);
   });
 });

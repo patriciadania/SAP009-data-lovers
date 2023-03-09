@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>Data Lovers</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="shortcut icon" href="icon.png" type="image/x-icon" />
+  <link rel="shortcut icon" href="./imagens/icon.png" type="image/x-icon" />
 </head>
 <!-- CABEÇALHO -->
 
@@ -13,10 +13,11 @@
   <header>
     <section class="conteudo-fixo">
       <nav class="cabecalho">
-        <img src="imagens/logo-site.png" alt="Logo do site" class="logo-site" />
+        <img src="./imagens/logo-site.png" alt="Logo do site" class="logo-site" />
         <a href="https://www.leagueoflegends.com/pt-br/how-to-play/"> Sobre o jogo </a>
-        <a href="#">Comunidade </a>
-        <a href="https://signup.leagueoflegends.com/pt-br/signup/index?_gl=1*xrlanb*_ga*MzkwMzg5OTY1LjE2NzUwOTczMDE.*_ga_FXBJE5DEDD*MTY3NTIxMTM1Ny40LjAuMTY3NTIxMTM1Ny42MC4wLjA.&_ga=2.23009657.357064309.1675097304-390389965.1675097301#/" id="jogar">Jogue agora </a>
+        <a href="https://www.leagueoflegends.com/pt-br/news/community/">Comunidade </a>
+        <a href="https://signup.leagueoflegends.com/pt-br/signup/index?_gl=1*xrlanb*_ga*MzkwMzg5OTY1LjE2NzUwOTczMDE.*_ga_FXBJE5DEDD*MTY3NTIxMTM1Ny40LjAuMTY3NTIxMTM1Ny42MC4wLjA.&_ga=2.23009657.357064309.1675097304-390389965.1675097301#/"
+          id="jogar">Jogue agora </a>
       </nav>
     </section>
   </header>
@@ -24,7 +25,8 @@
     <h1>ESCOLHA SEU CAMPEÃO</h1>
 
     <p> Com mais de 140 Campeões, você encontrará a combinação perfeita para seu estilo de jogo. Especialize-se em um
-      estilo ou em todos. Para acessar mais informações sobre os campeões,<a href="https://www.leagueoflegends.com/pt-br/how-to-play/" id="clique"> clique aqui.</a></p>
+      estilo ou em todos. Para acessar mais informações sobre os campeões,<a
+        href="https://www.leagueoflegends.com/pt-br/how-to-play/" id="clique"> clique aqui.</a></p>
   </div>
   <!-- MENU COM AS OPÇÕES DE CAMPEÕES -->
   <main>
@@ -39,8 +41,6 @@
           <li class="filtra-campeoes" id="Support"> Suportes</li>
           <li class="filtra-campeoes" id="Tank"> Tanques </li>
         </ul>
-      </div>
-    </section>
     <!-- AQUI COMEÇA O CAMPO DE BUSCA POR NOME E CLASSIFICAÇÃO DOS CAMPEÕES  -->
     <section class="busca-classifica">
       <input type="text" id="txt-busca" placeholder="Buscar campeão" />
@@ -55,8 +55,10 @@
         <option value="menor-magia"> Menor magia </option>
         <option value="menor-dificuldade"> Menor dificuldade </option>
       </select>
-
+      <button onClick="window.location.reload()" class="botao-limpar"> Limpar pesquisa</button>
     </section>
+    </div>
+  </section>
     <!-- AQUI FICARÃO OS CARDS DOS CAMPEÕES -->
     <section class="todos-campeoes">
       <p id="calculo-agregado"></p>
@@ -73,12 +75,14 @@
         <p> Projeto desenvolvido por</p>
       </section>
       <section class="nome-devs">
-        <a href="https://www.linkedin.com/in/ariane-vieira-534310164/"> Ariane Vieira <img src="imagens/iconeLinkedin.png" class="linkedin" width="5%" /> </a>
-        <a href="https://www.linkedin.com/in/patriciadania/"> Patricia Adania <img src="imagens/iconeLinkedin.png" class="linkedin" width="5%" /></a>
-        <a href="https://www.linkedin.com/in/thainaratabile/"> Thainara Tabile <img src="imagens/iconeLinkedin.png" class="linkedin" width="5%" /></a>
+        <a href="https://www.linkedin.com/in/ariane-vieira-534310164/"> Ariane Vieira <img src="./imagens/iconeLinkedin.png"
+            class="linkedin" width="5%" /> </a>
+        <a href="https://www.linkedin.com/in/patriciadania/"> Patricia Adania <img src="./imagens/iconeLinkedin.png"
+            class="linkedin" width="5%" /></a>
+        <a href="https://www.linkedin.com/in/thainaratabile/"> Thainara Tabile <img src="./imagens/iconeLinkedin.png"
+            class="linkedin" width="5%" /></a>
       </section>
     </div>
   </footer>
 </body>
-
 </html>
