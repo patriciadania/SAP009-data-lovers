@@ -8,6 +8,10 @@
 
 **Desenvolvido por**
 
+<p> Patricia Adania <br>
+<a href="https://www.linkedin.com/in/patriciadania/"> Lindedin </a> | <a href="https://github.com/patriciadania"> Github </a>
+</p>
+
 <p> Thainara Tabile <br>
 <a href="https://www.linkedin.com/in/thainaratabile/">Lindedin </a> | <a href="https://github.com/ThainaraTabile"> Github </a> </p>
 
@@ -15,9 +19,7 @@
 <a href="https://www.linkedin.com/in/ariane-vieira-534310164/"> Lindedin </a> | <a href="https://github.com/VieiraAriane"> Github </a>
 </p>
 
-<p> Patricia Adania <br>
-<a href="https://www.linkedin.com/in/patriciadania/"> Lindedin </a> | <a href="https://github.com/patriciadania"> Github </a>
-</p>
+
 </div>
 
 
